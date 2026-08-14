@@ -11,7 +11,8 @@ export const kwentongKusina: Project = {
   role: "Frontend engineering, Supabase/Postgres design, authorization, moderation workflows, testing, and protected deployment.",
   stack: ["React", "Vite", "Supabase", "PostgreSQL", "Row Level Security", "Vercel"],
   githubUrl: "https://github.com/aguitezFRG/kwentong-kusina",
-  liveUrl: "https://kwentong-kusina.cntest.uk",
+  liveUrl: "https://kwentong-kusina.frgagz.com",
+  previewMode: "external",
   heroImage: "/projects/kwentong-kusina/showcase.png",
   iconImage: "/projects/kwentong-kusina/kwentong_kusina_favicon.svg",
   gallery: [

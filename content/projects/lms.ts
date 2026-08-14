@@ -11,6 +11,8 @@ export const lms: Project = {
   role: "Full-stack engineering, product workflows, testing, deployment, and browser-demo packaging.",
   stack: ["Laravel", "Filament", "PHP", "Tailwind CSS", "SQLite", "PHPUnit"],
   githubUrl: "https://github.com/aguitezFRG/lms",
+  liveUrl: "https://lms-demo.frgagz.com",
+  previewMode: "embed",
   heroImage: "/projects/lms/showcase.png",
   iconImage: "/projects/lms/lms_favicon.png",
   gallery: [
