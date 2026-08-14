@@ -6,7 +6,7 @@ export const site = {
   email: "aguitez.francrogerglason@gmail.com",
   githubUrl: "https://github.com/aguitezFRG",
   linkedInUrl: "https://www.linkedin.com/in/aguitez-francrogerglason/",
-  siteUrl: "https://portfolio.vercel.app",
+  siteUrl: "https://portfolio.frgagz.com",
   capabilities: [
     ["Frontend", "React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Responsive UI"],
     ["Backend", "Laravel", "PHP", "Node.js", "REST APIs"],
