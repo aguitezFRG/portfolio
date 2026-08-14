@@ -11,7 +11,8 @@ export const dateFormBuilder: Project = {
   role: "Next.js implementation, verification flow, private delivery design, lifecycle modeling, testing, and deployment.",
   stack: ["Next.js", "TypeScript", "Supabase Auth", "PostgreSQL", "SMTP", "Vercel"],
   githubUrl: "https://github.com/aguitezFRG/simple_date_asking_website",
-  liveUrl: "https://simple-date-asking-website.vercel.app",
+  liveUrl: "https://wybmd.frgagz.com",
+  previewMode: "embed",
   heroImage: "/projects/date-form-builder/showcase.png",
   gallery: [
     { src: "/projects/date-form-builder/showcase.png", alt: "Public date invitation demo with yes and no response choices", caption: "A focused respondent experience" },

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root { --ink: #1a1c1a; --muted: #656960; --paper: #f7f5ef; --cream: #ece8de; --line: #d6d2c7; --lime: #c8e36a; --orange: #d9724b; --blue: #48766d; }
+:root { --ink: #1a1c1a; --muted: #656960; --paper: #f7f5ef; --cream: #ece8de; --line: #d6d2c7; --lime: #c8e36a; --orange: #d9724b; --blue: #48766d; --text-scale: 1; --type-title: clamp(3rem, 7vw, 6.55rem); --type-heading: clamp(2rem, 4vw, 4rem); --type-body: 1.06rem; --type-subtext: .88rem; }
 :root { --font-manrope: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI"; --font-mono: "SFMono-Regular", Consolas, "Liberation Mono"; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -37,3 +37,33 @@ button { font: inherit; }
 .project-gallery-controls p { margin: 0; color: var(--muted); font: .65rem var(--font-mono), monospace; letter-spacing: .05em; text-align: center; text-transform: uppercase; }
 
 @media (max-width: 800px) { .project-gallery-controls { grid-template-columns: 1fr auto; }.project-gallery-controls p { grid-column: 1 / -1; grid-row: 2; text-align: left; }.project-gallery-controls button span { display: none; } }
+
+/* The four semantic type tokens are scaled together by the accessibility control. */
+body { font-size: calc(var(--type-body) * var(--text-scale)); }
+.hero h1, .project-hero h1, .not-found h1, .next-project > a { font-size: calc(var(--type-title) * var(--text-scale)); }
+.section-intro h2, .preview-heading h2, .contact h2, .project-card-copy h3, .feature-grid h3, .challenge-list h3, .architecture-node p, .quality-grid h3 { font-size: calc(var(--type-heading) * var(--text-scale)); }
+.hero-lower > p, .section-intro > p:not(.section-kicker), .project-lede, .overview-copy > p, .about-copy p, .capability p, .experience-entry p, .experience-entry ul, .feature-grid p, .challenge-list p, .project-info p, .overview-copy dd, .preview-heading p, .quality-grid ul, .contact p:last-child { font-size: calc(var(--type-body) * var(--text-scale)); }
+.eyebrow, .section-kicker, .mono, .project-info span, .challenge-label, .architecture-node span, .nav-links, .text-link, .project-actions, .stack-list li, .preview-controls button, .browser-bar p, .gallery figcaption, .footer, .back-link, .project-gallery-controls button, .project-gallery-controls p { font-size: calc(var(--type-subtext) * var(--text-scale)); }
+
+.project-card .project-visual { aspect-ratio: 16 / 9; }
+.project-card .project-visual > img { width: 100%; height: 100%; object-fit: cover; }
+
+.text-size-control { position: relative; }
+.text-size-trigger { border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; font-size: calc(var(--type-subtext) * var(--text-scale)); font-weight: 700; padding: .48rem .75rem; white-space: nowrap; }
+.text-size-trigger:hover, .text-size-trigger[aria-expanded="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.text-size-popover { position: absolute; z-index: 3; top: calc(100% + .7rem); right: 0; width: 220px; padding: .8rem; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); box-shadow: 0 14px 35px rgb(26 28 26 / .16); }
+.text-size-popover > p { margin: 0 0 .5rem; color: var(--muted); font: calc(var(--type-subtext) * var(--text-scale)) var(--font-mono), monospace; text-transform: uppercase; letter-spacing: .06em; }
+.text-size-popover [role="radiogroup"] { display: grid; gap: .2rem; }
+.text-size-popover [role="radio"] { display: flex; justify-content: space-between; width: 100%; border: 0; border-radius: 7px; background: transparent; color: var(--ink); cursor: pointer; padding: .55rem .6rem; text-align: left; font-size: calc(var(--type-subtext) * var(--text-scale)); }
+.text-size-popover [role="radio"]:hover, .text-size-popover [role="radio"].is-selected { background: var(--cream); }
+.text-size-popover [role="radio"].is-selected span:first-child::before { content: "✓ "; color: var(--orange); }
+
+.external-preview { display: grid; justify-items: start; gap: 1.2rem; padding: clamp(2rem, 6vw, 5rem); border: 1px solid var(--line); border-radius: 18px; background: var(--cream); }
+.external-preview-label { margin: 0; color: var(--muted); font: calc(var(--type-subtext) * var(--text-scale)) var(--font-mono), monospace; letter-spacing: .06em; text-transform: uppercase; }
+.external-preview-label + p { margin: 0; font-size: calc(var(--type-heading) * var(--text-scale)); font-weight: 650; letter-spacing: -.05em; overflow-wrap: anywhere; }
+
+.project-card-copy h3 { font-size: calc(var(--type-heading) * .58 * var(--text-scale)); }
+.feature-grid h3, .challenge-list h3, .architecture-node p, .quality-grid h3 { font-size: calc(var(--type-heading) * .42 * var(--text-scale)); }
+.contact h2 { font-size: calc(var(--type-title) * .76 * var(--text-scale)); }
+
+@media (max-width: 800px) { .text-size-control { order: 2; margin-left: auto; margin-right: .35rem; }.nav-toggle { order: 3; }.text-size-popover { right: 0; }.hero h1, .project-hero h1, .not-found h1, .next-project > a { font-size: calc(var(--type-title) * var(--text-scale)); } }

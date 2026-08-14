@@ -22,6 +22,7 @@ export type Project = {
   stack: string[];
   githubUrl: string;
   liveUrl?: string;
+  previewMode?: "embed" | "external";
   heroImage: string;
   iconImage?: string;
   gallery: { src: string; alt: string; caption: string }[];
