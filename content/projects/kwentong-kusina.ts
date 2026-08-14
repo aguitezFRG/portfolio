@@ -12,12 +12,11 @@ export const kwentongKusina: Project = {
   stack: ["React", "Vite", "Supabase", "PostgreSQL", "Row Level Security", "Vercel"],
   githubUrl: "https://github.com/aguitezFRG/kwentong-kusina",
   liveUrl: "https://kwentong-kusina.cntest.uk",
-  heroImage: "/projects/kwentong-kusina/hero.svg",
+  heroImage: "/projects/kwentong-kusina/showcase.png",
   iconImage: "/projects/kwentong-kusina/kwentong_kusina_favicon.svg",
   gallery: [
-    { src: "/projects/kwentong-kusina/hero.svg", alt: "Illustrated food discovery catalog preview", caption: "Editorial food discovery" },
-    { src: "/projects/kwentong-kusina/hero.svg", alt: "Illustrated community contribution preview", caption: "Moderated community input" },
-    { src: "/projects/kwentong-kusina/hero.svg", alt: "Illustrated location proposal map preview", caption: "Location-aware details" },
+    { src: "/projects/kwentong-kusina/showcase.png", alt: "Kwentong Kusina food establishment catalog in the public demo", caption: "Editorial food discovery" },
+    { src: "/projects/kwentong-kusina/food-items.png", alt: "Kwentong Kusina food-item catalog with searchable dishes in the public demo", caption: "Browse dishes alongside the places that serve them" },
   ],
   features: [
     { title: "Discover with context", description: "Editorial catalog browsing, establishment details, reviews, and map-aware location information make recommendations easier to evaluate." },

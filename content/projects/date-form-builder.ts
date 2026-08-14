@@ -12,11 +12,10 @@ export const dateFormBuilder: Project = {
   stack: ["Next.js", "TypeScript", "Supabase Auth", "PostgreSQL", "SMTP", "Vercel"],
   githubUrl: "https://github.com/aguitezFRG/simple_date_asking_website",
   liveUrl: "https://simple-date-asking-website.vercel.app",
-  heroImage: "/projects/date-form-builder/hero.svg",
+  heroImage: "/projects/date-form-builder/showcase.png",
   gallery: [
-    { src: "/projects/date-form-builder/hero.svg", alt: "Illustrated form builder preview", caption: "Configurable creator workflow" },
-    { src: "/projects/date-form-builder/hero.svg", alt: "Illustrated public invitation preview", caption: "A focused respondent experience" },
-    { src: "/projects/date-form-builder/hero.svg", alt: "Illustrated expiration lifecycle preview", caption: "Expiration modeled as product behavior" },
+    { src: "/projects/date-form-builder/showcase.png", alt: "Public date invitation demo with yes and no response choices", caption: "A focused respondent experience" },
+    { src: "/projects/date-form-builder/landing.png", alt: "Date Form Builder landing page with links to create an invitation or view a demo", caption: "A clear starting point for creators and respondents" },
   ],
   features: [
     { title: "Shareable custom forms", description: "A presentation-only demo leads into an editable builder that publishes a unique public link after creator verification." },

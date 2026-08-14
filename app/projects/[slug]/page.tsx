@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { ProjectPreview } from "@/components/projects/project-preview";
+import { ProjectGallery } from "@/components/projects/project-gallery";
 import { ArrowRight, ArrowUpRight } from "@/components/ui/icons";
 import { getProject, projects } from "@/content/projects";
 
@@ -27,7 +28,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
   <section className="shell overview section-rule"><div className="section-intro"><p className="section-kicker">The brief</p><h2>Why it exists.</h2></div><div className="overview-copy"><p>{project.motivation}</p><dl><div><dt>For</dt><dd>{project.audience}</dd></div><div><dt>The outcome</dt><dd>{project.summary}</dd></div></dl></div></section>
 
-  <section className="shell features section-rule"><div className="section-intro"><p className="section-kicker">Product experience</p><h2>What it helps people do.</h2></div><div className="feature-grid">{project.features.map((feature, index) => <article key={feature.title}><span>0{index + 1}</span><h3>{feature.title}</h3><p>{feature.description}</p></article>)}</div><div className="gallery">{project.gallery.map((image) => <figure key={image.src}><Image src={image.src} alt={image.alt} width={1200} height={720} sizes="(max-width: 800px) 100vw, 50vw" /><figcaption>{image.caption}</figcaption></figure>)}</div></section>
+  <section className="shell features section-rule"><div className="section-intro"><p className="section-kicker">Product experience</p><h2>What it helps people do.</h2></div><div className="feature-grid">{project.features.map((feature, index) => <article key={feature.title}><span>0{index + 1}</span><h3>{feature.title}</h3><p>{feature.description}</p></article>)}</div><ProjectGallery name={project.name} images={project.gallery} /></section>
 
   <section className="shell challenges section-rule"><div className="section-intro"><p className="section-kicker">Engineering notes</p><h2>Decisions beneath the surface.</h2></div><div className="challenge-list">{project.challenges.map((challenge) => <article key={challenge.title}><h3>{challenge.title}</h3><div><p className="challenge-label">Problem</p><p>{challenge.problem}</p></div><div><p className="challenge-label">Approach</p><p>{challenge.approach}</p></div>{challenge.tradeoff && <div><p className="challenge-label">Rationale</p><p>{challenge.tradeoff}</p></div>}</article>)}</div></section>
 

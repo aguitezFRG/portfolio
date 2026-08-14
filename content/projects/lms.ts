@@ -11,12 +11,11 @@ export const lms: Project = {
   role: "Full-stack engineering, product workflows, testing, deployment, and browser-demo packaging.",
   stack: ["Laravel", "Filament", "PHP", "Tailwind CSS", "SQLite", "PHPUnit"],
   githubUrl: "https://github.com/aguitezFRG/lms",
-  heroImage: "/projects/lms/hero.svg",
+  heroImage: "/projects/lms/showcase.png",
   iconImage: "/projects/lms/lms_favicon.png",
   gallery: [
-    { src: "/projects/lms/hero.svg", alt: "Illustrated preview of the material catalog", caption: "Role-filtered catalog discovery" },
-    { src: "/projects/lms/hero.svg", alt: "Illustrated preview of request management", caption: "Borrow and access workflows" },
-    { src: "/projects/lms/hero.svg", alt: "Illustrated preview of analytics", caption: "Operational activity at a glance" },
+    { src: "/projects/lms/showcase.png", alt: "LMS material catalog with search, filters, and available research materials", caption: "Role-filtered catalog discovery" },
+    { src: "/projects/lms/material-detail.png", alt: "LMS material-detail view with research metadata and a digital-copy request action", caption: "Material context before a controlled access request" },
   ],
   features: [
     { title: "Two purpose-built panels", description: "Faculty and students browse, request, and monitor materials; administrators manage users, catalog data, access levels, and decisions." },
