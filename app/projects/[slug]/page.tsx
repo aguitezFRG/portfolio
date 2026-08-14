@@ -34,6 +34,6 @@ export default async function ProjectPage({ params }: PageProps) {
 
   <section className="shell architecture section-rule"><div className="section-intro"><p className="section-kicker">Architecture</p><h2>Small diagram, clear boundaries.</h2></div><div className="architecture-flow">{project.architecture.map((item, index) => <div key={item} className="architecture-node"><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></div>)}</div><div className="quality-grid"><div><h3>Quality</h3><ul>{project.quality.map((item) => <li key={item}>{item}</li>)}</ul></div><div><h3>Security & trust</h3><ul>{project.security.map((item) => <li key={item}>{item}</li>)}</ul></div></div></section>
 
-  <ProjectPreview name={project.name} url={project.liveUrl} mode={project.previewMode} />
+  <ProjectPreview name={project.name} url={project.liveUrl} image={project.heroImage} mode={project.previewMode} />
   <section className="shell next-project"><p className="section-kicker">Next case study</p><Link href={`/projects/${next.slug}`}><span>{next.name}</span><ArrowRight /></Link></section></main><Footer /></>;
 }
