@@ -12,7 +12,7 @@ export const kwentongKusina: Project = {
   stack: ["React", "Vite", "Supabase", "PostgreSQL", "Row Level Security", "Vercel"],
   githubUrl: "https://github.com/aguitezFRG/kwentong-kusina",
   liveUrl: "https://kwentong-kusina.frgagz.com",
-  previewMode: "external",
+  previewMode: "embed",
   heroImage: "/projects/kwentong-kusina/showcase.png",
   iconImage: "/projects/kwentong-kusina/kwentong_kusina_favicon.svg",
   gallery: [

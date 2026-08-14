@@ -12,7 +12,7 @@ export const lms: Project = {
   stack: ["Laravel 12", "Filament 5", "PHP", "PostgreSQL", "Supabase Storage", "Render"],
   githubUrl: "https://github.com/aguitezFRG/lms",
   liveUrl: "https://lms-demo.frgagz.com",
-  previewMode: "external",
+  previewMode: "embed",
   heroImage: "/projects/lms/showcase.png",
   iconImage: "/projects/lms/lms_favicon.png",
   gallery: [
