@@ -7,7 +7,6 @@ const links = [
   ["Work", "#work"],
   ["About", "#about"],
   ["Capabilities", "#capabilities"],
-  ["Résumé", "/resume.pdf"],
 ];
 
 export function Navbar() {

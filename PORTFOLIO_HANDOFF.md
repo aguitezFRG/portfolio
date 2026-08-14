@@ -2,14 +2,7 @@
 
 The portfolio is implemented locally. Complete these items before treating the public V1 as finished.
 
-## 1. Add your résumé
-
-1. Export your current résumé as a PDF.
-2. Add it at `public/resume.pdf`.
-3. Add a Resume link to the navigation and hero once the file is present.
-4. Open `/resume.pdf` locally and in production to confirm it downloads or displays correctly.
-
-## 2. Replace the illustrated previews
+## 1. Replace the illustrated previews
 
 The current project visuals are intentionally labeled interface illustrations, not fabricated screenshots. Replace them with real, non-sensitive captures:
 
@@ -25,7 +18,7 @@ Recommended coverage for each project:
 
 Avoid login screens, empty data states, error messages, credentials, student records, personal email addresses, or other private data. Update the matching image paths and alt text in `content/projects/*.ts` after adding files.
 
-## 3. Review public copy
+## 2. Review public copy
 
 Read each case study as a recruiter and confirm:
 
@@ -37,7 +30,7 @@ Read each case study as a recruiter and confirm:
 
 The primary content files are in `content/site.ts` and `content/projects/`.
 
-## 4. Prepare Vercel deployment
+## 3. Prepare Vercel deployment
 
 1. Create or import the `aguitezFRG/portfolio` repository in Vercel.
 2. Use the repository root as the project root.
@@ -48,20 +41,20 @@ The primary content files are in `content/site.ts` and `content/projects/`.
 7. Replace `siteUrl` in `content/site.ts` with that exact canonical HTTPS URL.
 8. Redeploy so canonical metadata, sitemap, and robots point to the correct origin.
 
-## 5. Validate external project previews
+## 4. Validate external project previews
 
 For each live project link, confirm it opens successfully in a new tab.
 
 The current portfolio includes live URLs for Kwentong Kusina and Custom Date Form Builder. If a host blocks iframe embedding through CSP or `X-Frame-Options`, retain the external link and remove its `liveUrl` only if the product is no longer publicly available. Never rely on a live preview for the portfolio to communicate the project.
 
-## 6. Final production review
+## 5. Final production review
 
 Check the deployed website at desktop and mobile sizes:
 
 - navigation and anchor links;
 - all three project routes;
 - screenshots and image alt text;
-- GitHub, LinkedIn, email, résumé, and live-site links;
+- GitHub, LinkedIn, email, and live-site links;
 - no horizontal scrolling;
 - keyboard focus visibility;
 - social metadata, `/robots.txt`, and `/sitemap.xml`.
@@ -73,7 +66,7 @@ npm run lint
 npm run build
 ```
 
-## 7. Commit safely
+## 6. Commit safely
 
 Review exactly what will be committed:
 
