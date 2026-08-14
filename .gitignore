@@ -1,0 +1,14 @@
+node_modules
+.next
+.vercel
+coverage
+*.tsbuildinfo
+
+# Local agent tooling and instructions must never be committed.
+.agents/
+.codex/
+.agent-memory/
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+TASTES.md
