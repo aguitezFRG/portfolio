@@ -71,3 +71,7 @@ body { font-size: calc(var(--type-body) * var(--text-scale)); }
 .project-hero-copy, .project-hero h1 { width: 100%; max-width: none; }
 
 @media (max-width: 800px) { .text-size-control { order: 2; margin-left: auto; margin-right: .35rem; }.nav-toggle { order: 3; }.text-size-popover { right: 0; }.hero h1, .project-hero h1, .not-found h1, .next-project > a { font-size: calc(var(--type-title) * var(--text-scale)); }.external-preview { grid-template-columns: 1fr; } }
+
+/* Show a fixed logical viewport and scale the complete embedded page to fit. */
+.iframe-viewport { position: relative; width: 100%; overflow: hidden; transition: height .35s ease; }
+.iframe-viewport .iframe-wrap { position: absolute; top: 0; left: 50%; margin: 0; transform-origin: top center; transition: transform .35s ease; }
