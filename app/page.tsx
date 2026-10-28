@@ -3,6 +3,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { ProjectCard } from "@/components/projects/project-card";
 import { ArrowDown, ArrowUpRight } from "@/components/ui/home-icons";
 import { Github, LinkedIn } from "@/components/ui/icons";
+import { Reveal } from "@/components/ui/reveal";
 import { projects } from "@/content/projects";
 import { site } from "@/content/site";
 
@@ -13,9 +14,9 @@ export default function Home() {
 
   <section className="shell work-section" id="work"><div className="section-intro"><p className="section-kicker">Selected work</p><h2>Projects that make the engineering visible.</h2><p>Each case study starts with the product outcome, then opens into the decisions that made it work.</p></div><div className="project-list">{projects.map((project, index) => <ProjectCard project={project} index={index} key={project.slug} />)}</div></section>
 
-  <section className="shell capabilities section-rule" id="capabilities"><div className="section-intro"><p className="section-kicker">Capabilities</p><h2>End-to-end, without losing the details.</h2></div><div className="capability-grid">{site.capabilities.map(([heading, ...items]) => <div className="capability" key={heading}><h3>{heading}</h3><p>{items.join(" · ")}</p></div>)}</div></section>
+  <Reveal as="section" id="work" className="shell work-section"><div className="section-intro"><p className="section-kicker">Selected work</p><h2>Projects that make the engineering visible.</h2><p>Each case study starts with the product outcome, then opens into the decisions that made it work.</p></div><div className="project-list">{projects.map((project, index) => <Reveal key={project.slug} delay={Math.min(index, 3) * 80}><ProjectCard project={project} index={index} /></Reveal>)}</div></Reveal>
 
   <section className="shell experience section-rule"><div className="section-intro"><p className="section-kicker">Experience</p><h2>Owning the path from brief to release.</h2></div><div>{site.experience.map((entry) => <article className="experience-entry" key={entry.title}><div><h3>{entry.title}</h3><p className="mono">{entry.period}</p></div><ul>{entry.details.map((detail) => <li key={detail}>{detail}</li>)}</ul></article>)}</div></section>
 
-  <section className="contact"><div className="shell contact-inner"><p className="section-kicker">Contact</p><h2>Have a product problem worth solving?</h2><a className="contact-email" href={`mailto:${site.email}`}>{site.email} <ArrowUpRight /></a><p>Or explore the work on <a href={site.githubUrl} target="_blank" rel="noreferrer">GitHub</a> and <a href={site.linkedInUrl} target="_blank" rel="noreferrer">LinkedIn</a>.</p></div></section></main><Footer /></>;
+  <Reveal as="section" className="contact"><div className="shell contact-inner"><p className="section-kicker">Contact</p><h2>Have a product problem worth solving?</h2><a className="contact-email" href={`mailto:${site.email}`}>{site.email} <ArrowUpRight /></a><p>Or explore the work on <a href={site.githubUrl} target="_blank" rel="noreferrer">GitHub</a> and <a href={site.linkedInUrl} target="_blank" rel="noreferrer">LinkedIn</a>.</p></div></Reveal></main><Footer /></>;
 }
